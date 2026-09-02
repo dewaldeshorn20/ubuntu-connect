@@ -1,0 +1,85 @@
+:root {
+    --ubuntu-orange: #E95420; /* Ubuntu brand identity color */
+    --ubuntu-dark: #2C001E;   /* Deep aubergine accent color */
+    --money-green: #28a745; /* Color used for finance related values*/
+}
+
+/* Gloabal body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+   color: #333333;
+}
+
+
+.container {
+    flex: 1;
+}
+
+/* Navigation Styling */
+.navbar-dark.bg-dark {
+    background-color: var(--ubuntu-dark) !important;
+    border-bottom: 3px solid var(--ubuntu-orange);
+}
+
+/*Logo Styling*/
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    
+}
+
+/*Styling for landing pages*/
+.bg-dark.p-5 {
+    background: linear-gradient(135deg, var(--ubuntu-dark) 0%, #4f183e 100%) !important;
+    border-left: 5px solid var(--ubuntu-orange);
+}
+
+/*Product Marketplace Card*/
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/*Hover Effect for marketplace card*/
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
+}
+
+/*Product Image styling*/
+.card-img-top {
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
+    background-color: #eaeaea;
+}
+
+/* Form Focus Styling */
+.form-control:focus, 
+.form-select:focus {
+    border-color: var(--ubuntu-orange);
+    box-shadow: 0 0 0 0.25px rgba(233, 84, 32, 0.25);
+}
+
+/*Primary Buttonstyling*/
+.btn-primary {
+    background-color: var(--ubuntu-orange) !important;
+    border-color: var(--ubuntu-orange) !important;
+}
+
+/*Primary button hover styling*/
+.btn-primary:hover {
+    background-color: #c84115 !important;
+    border-color: #c84115 !important;
+}
+
+/*Table header styling for admin dashboard*/
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
