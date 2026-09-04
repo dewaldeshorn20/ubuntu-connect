@@ -31,9 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['amount'])) {
         $pfData = [
             'merchant_id'  => PAYFAST_MERCHANT_ID,
             'merchant_key' => PAYFAST_MERCHANT_KEY,
-            'return_url'   => base_URL . 'wallet-topup-return.php?topup=' . $topupID,
-            'cancel_url'   => base_URL . 'wallet-topup-cancel.php?topup=' . $topupID,
-            'notify_url'   => base_URL . 'payfast-notify.php',
+
+            'return_url'   => base_URL . '/wallet-topup-return.php?topup=' . $topupID,
+            'cancel_url'   => base_URL . '/wallet-topup-cancel.php?topup=' . $topupID,
+            'notify_url'   => base_URL . '/payfast-notify.php',
+
             'name_first'   => $_SESSION['userName'],
             'email_address'=> $userEmail,
             'm_payment_id' => (string)$topupID,
