@@ -11,7 +11,7 @@ if (!isset($_SESSION['userID']) || $_SESSION['userRole'] !== 'admin') {
 }
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    header("Location: " . base_URL . "admin/admin-manageusers.php");
+    header("Location: " . base_URL . "/admin/admin-manageusers.php");
     exit;
 }
 
@@ -20,7 +20,7 @@ $id = intval($_GET['id']);
 // Avoid accidentally deleting the admin account that is logged in
 if ($id === $_SESSION['userID']) {
     $_SESSION['flashError'] = "You can't delete the account you're currently logged in as.";
-    header("Location: " . base_URL . "admin/admin-manageusers.php");
+    header("Location: " . base_URL . "/admin/admin-manageusers.php");
     exit;
 }
 
@@ -56,5 +56,6 @@ try {
     $_SESSION['flashError'] = "Couldn't delete this user - they still have transaction history on record. Remove or reassign that first.";
 }
 
-header("Location: " . base_URL . "admin/admin-manageusers.php");
+//header("Location: " . base_URL . "admin/admin-manageusers.php"); // live
+header("Location: " . base_URL . "/admin/admin-manageusers.php");//local
 exit;

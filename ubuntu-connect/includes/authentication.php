@@ -69,7 +69,8 @@ function updateUserRating(int $sellerID): void
     function getUnreadMessages() {
     global $pdo;
 
-    if (!isset($_SESSION['userID'])) {
+    if (!isset($_SESSION['userID'])) 
+        {
         return 0;
     }
 
@@ -77,7 +78,7 @@ function updateUserRating(int $sellerID): void
         SELECT COUNT(*) 
         FROM tblmessages 
         WHERE receiverID = ? 
-        AND is_read = 0 
+        AND isRead = 0 
     ");
     
     
