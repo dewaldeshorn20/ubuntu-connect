@@ -51,9 +51,18 @@ $listings = $pdo->query("SELECT l.listingID, l.listingTitle, l.listingPrice, l.l
     <!--This is the header section which includes the page title and logout button-->
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Ubuntu-Connect Administrative Dashboard</h1>
+  <div>
+        <a href="<?= base_URL ?>/admin/admin-manageusers.php" class="btn btn-primary me-2">
+            Manage Users
+        </a>
+
+        <a href="<?= base_URL ?>/admin/admin-manageproducts.php" class="btn btn-success me-2">
+            Manage Listings
+        </a>
 
         <!--This part of the code is used to logout safely by destroying the session and redirecting to the login page-->
         <a href="../connect-logout.php" class="btn btn-outline-danger">Log Out</a>
+        </div>
     </div>
 
     <!--dashboard statistics-->
