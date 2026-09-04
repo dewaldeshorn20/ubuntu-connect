@@ -56,6 +56,6 @@ try {
     $_SESSION['flashError'] = "Couldn't delete this user - they still have transaction history on record. Remove or reassign that first.";
 }
 
-//header("Location: " . base_URL . "admin/admin-manageusers.php"); // live
-header("Location: " . base_URL . "/admin/admin-manageusers.php");//local
+
+header("Location: " . base_URL . "/admin/admin-manageusers.php");
 exit;
